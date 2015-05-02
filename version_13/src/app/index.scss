@@ -6,7 +6,7 @@ input, textarea, .uneditable-input {
   max-width: 40%;
    background-color: white;
  /*  background-color: #623114; */	
-  color: #fff; }
+  color: #1e90ff; }
 .fancymodal.fancymodal-theme-classic .fancymodal-content-opening {
   -webkit-animation: fancymodal-in 1s;
   animation: fancymodal-in 1s; }
@@ -25,7 +25,7 @@ input, textarea, .uneditable-input {
  /*  background-color: #fceed4; */
  	background-color: white;	
  /*  background-color: #623114; */
-  color: #000; }
+  color: #1e90ff; }
 .fancymodal.fancymodal-theme-chat .fancymodal-content-opening {
   -webkit-animation: fancymodal-in 1s;
   animation: fancymodal-in 1s; }
@@ -62,7 +62,7 @@ body {
            background: url('/assets/images/backgroundimg.jpg') no-repeat center center fixed;
            background-size: cover;
            height: 100%;
-           color:#ffd9d9 ;
+           color:#1e90ff ;
          }
 } 
 
@@ -70,7 +70,7 @@ body {
 
 .transparent {
 	
-	opacity: 0.4;
+	opacity: 0.1;
 	color:black;
 	
 }

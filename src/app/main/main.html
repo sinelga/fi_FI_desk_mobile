@@ -1,0 +1,156 @@
+{{err}}
+
+
+
+<div data-ar-lg>
+
+
+ <loading-screen is-loading="myLoadingScope" src="/assets/images/sex_chat.jpg" width="200" height="200" timer="2000" ></loading-screen>
+   
+      
+  <div ng-if="!myLoadingScope" class="container">
+  
+  
+ <!--  <div ng-show="error"> -->
+  
+  		
+  
+ <!--  </div> -->
+  
+  <div class="row">
+  
+  <div class="col-md-5">
+  
+  <div class="media" ng-repeat="character in characters" >
+  
+  <div class="media-left">
+    <a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000{{character.Id | img_link}}{{character.Img_file_name}}/150/200"></a>
+  </div>
+  <div class="media-body">
+  	
+  	<h2 class="media-heading bigphone">{{character.Phone}}</h2>
+  	<h3 class="media-heading">{{character.Name}} {{character.Age}}v</h3>
+  	<h4 class="media-heading">{{character.City}} </h4>
+  	 	  	  
+  </div>      
+  </div>
+  </div>
+  <div sticky class="col-md-7">
+  
+  			<div class="row">
+  				<div class="col-md-7">
+		 	<h2 class="media-heading bigphone">{{selectedCharacter.Phone}}</h2>
+  			<h3 class="media-heading">{{selectedCharacter.Name}} {{selectedCharacter.Age}}v</h3>
+  			<h4 class="media-heading">{{selectedCharacter.City}}: {{selectedCharacter.Moto}}</h4>
+  				</div>
+  				<div class="col-md-5">
+  					<!-- <button  type="button" ng-click="startChat()" class="btn btn-lg btn-danger marginetop20">Nopea CHATTI!</button>	 -->		
+  				</div>  				
+  			
+  			</div>
+		
+  		<div class="media" >
+  		
+  		<div class="media-left">
+  			<a href="#"> <img ng-click="showFullImage()" class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000{{selectedCharacter.Id | img_link}}{{selectedCharacter.Img_file_name}}/350/400"></a>
+  		
+  		</div>
+  		
+  		<div class="media-body">
+  		<button  type="button" ng-click="startChat()" class="btn btn-lg btn-danger marginetop20">Nopea CHATTI!</button>
+  		</div>	
+  			
+  		
+  		</div>
+  		    
+  </div>
+ 
+  			 <div class="transparent media-body ">
+				{{selectedCharacter.Description}} 
+  	 	  	  
+  			</div>
+  			
+     
+  </div>
+    
+  </div>
+  
+  </div>
+  
+   <div  data-ar-responsive="{'xs': true, 'sm': true, 'md': true,'ld': false}" >
+   
+   <div ng-if="returnBack" ><button  ng-click="returnBackButton()" class="btn btn-warning btn-lg  marginetop10 pull-right" type="button">Return</button></div>  
+   
+   
+    <div ng-show="!mchat">
+    <div ng-show="!mselected" class="row">
+  
+  <div class="col-md-5">
+  
+  <div class="media" ng-repeat="character in characters" >
+  
+  <div class="media-left">
+    <a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000{{character.Id | img_link}}{{character.Img_file_name}}/100/150"></a>
+  </div>
+  <div class="media-body">
+  	
+  	<h2 class="media-heading mbigphone">{{character.Phone}}</h2>
+  	<h3 class="media-heading">{{character.Name}} {{character.Age}}v</h3>
+  	<h4 class="media-heading">{{character.City}} </h4>
+  	 	  	  
+  </div>      
+  </div>
+  
+  </div>
+      
+  </div>
+  </div>
+  
+	     
+  <div ng-show="!mchat">
+  <div ng-show="mselected">
+
+ 
+  		<div class="mbigphone">&nbsp;&nbsp;{{selectedCharacter.Phone}} </div>
+  		<a href="#"> <img  class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000{{selectedCharacter.Id | img_link}}{{selectedCharacter.Img_file_name}}/200/250"></a>
+  		<button  type="button" ng-click="startChat()" class="btn btn-lg btn-danger marginetop20">Nopea CHATTI!</button>
+  		
+  
+  </div>
+  </div>
+   
+  
+  <div ng-show="mchat">
+ 
+ <img class="img-rounded" alt="" ng-src="assets/images/sex_chat.png"> 		
+  
+
+
+<div class="col-md-6">
+<div ng-if="!showAnswer" > 
+	<div class=counter>{{clock}}</div>
+</div>
+</div>
+
+
+    <div class="mmodaltext">{{mAsk}} </div>     
+    <div ng-if="!showAnswer" > 
+      <div class="showAnswer"> <div><div class="counter">Odotta... </div></div></div>
+    </div>
+    <div ng-if="showAnswer" >       
+      <div class="showAnswer"><div class="mmodaltext"><div class="red modaltext">{{selectedCharacter.Name}}:&nbsp; </div> {{mAnswer}}</div></div>
+       <div class="chatInput"><input type="text" name="widget2"  ng-show="empty" class="sample-show-hide chatInput" ng-model="widget2" placeholder="{{placeholderstr}}">&nbsp;&nbsp;</div>
+      <button ng-click="chatContinue()" class="btn btn-warning btn-lg  marginetop10 pull-right" type="button">Jatkaa!</button>
+    </div>
+    
+    
+  </div>
+     
+  </div>
+  
+  
+  
+  
+  
+  
+

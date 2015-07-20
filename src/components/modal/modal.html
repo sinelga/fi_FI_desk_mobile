@@ -1,0 +1,29 @@
+
+<div class="row">
+
+<div class="col-md-6">
+
+<img class="img-rounded" alt="" ng-src="assets/images/sex_chat.png">
+</div>
+<div class="col-md-6">
+<div ng-if="!showAnswer" > 
+	<div class=counter>{{clock}}</div>
+</div>
+</div>
+
+</div>
+
+    	<div class="media"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading modaltext">{{mAsk}} </div></div></div> 
+     	
+      
+      <div ng-if="!showAnswer" > 
+      	<div class="media showAnswer"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading counter">Odotta... </div></div></div>
+      </div>
+      <div ng-if="showAnswer" > 
+      
+      	<div class="media showAnswer"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading modaltext "><div class="red modaltext">{{selectedCharacter.Name}}:&nbsp; </div> {{mAnswer}} </div></div></div>
+        <input type="text" name="widget2"  ng-show="empty" class="form-control marginetop20 sample-show-hide" ng-model="widget2" placeholder="{{placeholderstr}}">      
+      	<button ng-click="chatContinue()" class="btn btn-warning btn-lg  marginetop10 pull-right" type="button">Jatkaa!</button>
+      	
+      </div>
+               

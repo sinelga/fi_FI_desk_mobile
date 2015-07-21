@@ -2,7 +2,7 @@
  * angular-fancy-modal - the definitive modal/popup/dialog solution for AngularJS.
  * @author Alessandro Arnodo
  * @url http://alessandro.arnodo.net
- * @version v0.1.2
+ * @version v0.1.4
  * @link https://github.com/vesparny/angular-fancy-modal
  * @license MIT
  */
@@ -224,7 +224,7 @@
 
             modal.bind('click', closeByAction);
             modal.append(content);
-            $body.append(modal);
+            $body.append($compile(modal)(scope));
             var id = 'fancymodal-'+incrementalId;
             var $modal = {
               id: id,

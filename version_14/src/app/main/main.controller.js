@@ -79,16 +79,17 @@ angular.module('FiFiDeskMobile')
 			
 			if (device ==='ld') {
 			
-			$fancyModal.open({
-				templateUrl: 'components/modal/modal.html',
-				scope: $scope,
-				controller: 'ModalCtrl',
-				openingClass: 'animated zoomIn',
-				closingClass: 'animated hinge',
-				openingOverlayClass: 'animated fadeIn',
-				closingOverlayClass: 'animated fadeOut',
-				themeClass: 'fancymodal-theme-chat',
-			});
+				$fancyModal.open({
+					templateUrl: 'components/modal/modal.html',
+					scope: $scope,
+					controller: 'ModalCtrl',
+					openingClass: 'animated zoomIn',
+					closingClass: 'animated hinge',
+					openingOverlayClass: 'animated fadeIn',
+					closingOverlayClass: 'animated fadeOut',
+					themeClass: 'fancymodal-theme-chat',
+				});
+				
 			} else {
 								
 				$scope.mchat =true;
@@ -143,16 +144,26 @@ angular.module('FiFiDeskMobile')
 		
 		 var  timer= function() {
 			 
-			  $scope.clock = 0;
+			  $scope.clock = "";
+			  var counttimer =0;
 			  
 			  var rand =Math.floor(Math.random() * (1 + 20 - 5)) + 5;
 			  
 			  $scope.timer = setInterval(function(){
 			        $scope.$apply(function() {
 			        	
-			            $scope.clock += 1;
+//			            $scope.clock += 1;
 			            
-			            if ($scope.clock > rand) {
+			        	counttimer += 1;
+			        	
+			        	if (counttimer === 5 || counttimer ===9  || counttimer ===15) {
+			        		$scope.clock =$scope.selectedCharacter.Name+" Typing"
+			        		
+			        	} else {
+			        		$scope.clock ="";
+			        	}
+			            
+			            if ( counttimer > rand) {
 			            	clearInterval($scope.timer);
 			            	$scope.showAnswer = true;
 			            	$scope.widget2 ='';

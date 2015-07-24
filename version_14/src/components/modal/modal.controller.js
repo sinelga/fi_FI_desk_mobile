@@ -21,7 +21,7 @@ angular.module('FiFiDeskMobile')
 			});
 		 
 		 $rootScope.$on('$fancyModal.closed', function (e, id) {
-			    console.log('$fancyModal closed: ' + id);
+//			    console.log('$fancyModal closed: ' + id);
 			    clearInterval($scope.timer);
 			});
 	 		 		 
@@ -72,7 +72,7 @@ angular.module('FiFiDeskMobile')
 			        	
 			        	counttimer += 1;
 			        	
-			        	if (counttimer === 5 || counttimer ===9  || counttimer ===15) {
+			        	if (counttimer === 5 || counttimer === 9  || counttimer === 15) {
 			        		$scope.clock =$scope.selectedCharacter.Name+" Typing"
 			        		
 			        	} else {

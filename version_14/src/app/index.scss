@@ -104,8 +104,6 @@ body {
   color: default;
 }
 
-
-
 .red {	
 	color: red;
 	display: inline-block;
@@ -119,6 +117,20 @@ body {
 	font-size: 150%;
 	margin-top:10%;
 	margin-left: 15%;
+	
+}
+
+.countermob {
+	
+	color: red;
+	font-family: 'Special Elite', cursive !important;
+  	font-size: 50%;
+	margin-top:10%;
+	margin-left: 15%;	
+}
+
+.close {
+	font-size: 250%;
 	
 }
 
@@ -165,18 +177,7 @@ body {
 	
 }
 
-/* 
-.chatInput {
 
-	margin-top:10%;
-	margin-right: 15% !important ;
-	padding-right: 50px !important;
-	display: inline-block;
-    vertical-align: middle;
-      
-	
-	
-} */
 
 .chatInput input{
 	

@@ -151,8 +151,6 @@ angular.module('FiFiDeskMobile')
 			  
 			  $scope.timer = setInterval(function(){
 			        $scope.$apply(function() {
-			        	
-//			            $scope.clock += 1;
 			            
 			        	counttimer += 1;
 			        	

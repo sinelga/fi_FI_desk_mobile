@@ -12,7 +12,7 @@ angular.module('FiFiDeskMobile')
   .filter('img_link', function () {
     return function (input) {
 
-        return "/img/"+input+"/";     
+        return "/img/";     
                  
     };
   }).filter('perm_link', function () {

@@ -18,7 +18,7 @@
   <div class="media" ng-repeat="character in characters" >
   
   <div class="media-left">
-    <a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000{{character.Id | img_link}}{{character.Img_file_name}}/150/200"></a>
+    <a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000/img/{{character.ImgId}}/{{character.Img_file_name}}/150/200"></a>
   </div>
   <div class="media-body">
   	
@@ -46,7 +46,7 @@
   		<div class="media" >
   		
   		<div class="media-left">
-  			<a href="#"> <img ng-click="showFullImage()" class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000{{selectedCharacter.Id | img_link}}{{selectedCharacter.Img_file_name}}/350/400"></a>
+  			<a href="#"> <img ng-click="showFullImage()" class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000/img/{{selectedCharacter.ImgId}}/{{selectedCharacter.Img_file_name}}/350/400"></a>
   		
   		</div>
   		

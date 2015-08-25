@@ -21,21 +21,6 @@ angular.module('FiFiDeskMobile')
 	    	return input.replace(' ','-')+'.html';	        
 	    }
 	                 
-  }).fiter('imgid', function () {
-	  return function (input) {
-//		  var imgarr = input.split("\");
-		  return input.split("\\")[0];
-		  
-	  }	   
-	  
-	  
-  }).fiter('imgfile', function () {
-	  return function (input) {
-		  var imgarr = input.split("\\");
-		  return input.imgarr[1];
-	  }
-			  
-			  
   });
 
   

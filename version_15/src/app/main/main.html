@@ -93,7 +93,8 @@
   	<div class="media" ng-repeat="character in characters" >
   
   		<div class="media-left">
-    		<a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000{{character.Id | img_link}}{{character.Img_file_name}}/100/150"></a>
+    		
+    		<a ng-href="/{{character.Id}}/{{character.Moto | perm_link}}"> <img class="img-rounded boxImageSmall" alt="" ng-src="http://{{host}}:8000/img/{{character.ImgId}}/{{character.Img_file_name}}/100/150"></a>
   		</div>
   		<div class="media-body">
   	
@@ -116,8 +117,8 @@
 
  
   		<!-- <div class="mbigphone">&nbsp;&nbsp;{{selectedCharacter.Phone}} </div> -->
-  		<a class="media-heading mbigphone" href="tel:{{selectedCharacter.Phone}}}">{{selectedCharacter.Phone}}</a>
-  		<a href="#"> <img  class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000{{selectedCharacter.Id | img_link}}{{selectedCharacter.Img_file_name}}/200/250"></a>
+  		<a class="media-heading mbigphone" href="tel:{{selectedCharacter.Phone}}}">{{selectedCharacter.Phone}}</a>  		
+  		<a href="#"> <img  class="img-rounded boxImage" alt="" ng-src="http://{{host}}:8000/img/{{selectedCharacter.ImgId}}/{{selectedCharacter.Img_file_name}}/200/250"></a>
   		<button  type="button" ng-click="startChat()" class="btn btn-lg btn-danger marginetop20">Nopea CHATTI!</button>
   		
   

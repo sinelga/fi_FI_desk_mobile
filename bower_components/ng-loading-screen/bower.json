@@ -1,0 +1,23 @@
+{
+  "name": "ng-loading-screen",
+  "version": "1.0.0",
+  "homepage": "https://github.com/iktw/ngLoadingScreen",
+  "description": "Angular Directive which puts a overlay loading screen if is-loading attribute is True and removes it when False.",
+  "keywords": [
+    "angular",
+    "loadingscreen",
+    "appgyver",
+    "ionic"
+  ],
+  "authors": [
+    "Mohammed Hammoud"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

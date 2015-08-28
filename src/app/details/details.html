@@ -1,0 +1,85 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+    
+  <div class="container">
+  
+  
+  <div class="row">
+  
+  <div class="col-md-5">
+  
+  <div class="media" ng-repeat="character in characters" >
+  
+  <div class="media-left">
+    <a href="/{{character.Id}}/{{character.Moto}}"> <img class="img-rounded" alt="" ng-src="http://{{host}}:8000{{character.Id | img_link}}{{character.Img_file_name}}/{{character.Img_content_type}}/150/200"></a>
+  </div>
+  <div class="media-body">
+  	
+  	<h2 class="media-heading bigphone">{{character.Phone}}</h2>
+  	<h3 class="media-heading">{{character.Name}} {{character.Age}}v</h3>
+  	<h4 class="media-heading">{{character.City}} </h4>
+  	 	  	  
+  </div>      
+  </div>
+  </div>
+  <div class="col-md-7">
+  		<div class="row">
+  				<div class="col-md-7">
+		 	<h2 class="media-heading bigphone">{{selectedCharacter.Phone}}</h2>
+  			<h3 class="media-heading">{{selectedCharacter.Name}} {{selectedCharacter.Age}}v</h3>
+  			<h4 class="media-heading">{{selectedCharacter.City}}: {{selectedCharacter.Moto}}</h4>
+  				</div>
+  				<div class="col-md-5">
+  					<!-- <button  type="button" ng-click="startChat()" class="btn btn-lg btn-danger marginetop20">Quick CHATTI!<span class="glyphicon glyphicon-ok"></span></button> --> 
+  					<button  type="button" ng-click="toggleModal()" class="btn btn-lg btn-danger marginetop20">Nopea CHATTI!</button> 				
+  				</div>  				
+  			
+  		</div>
+  			
+  		<div class="media" >
+  		
+  		<div class="media-left">
+  			<a href="#"> <img class="img-rounded" alt="" ng-src="http://{{host}}:8000{{selectedCharacter.Id | img_link}}{{selectedCharacter.Img_file_name}}/{{selectedCharacter.Img_content_type}}/350/400"></a>
+  		
+  		</div>
+  		
+  		<div class="media-body">
+			{{selectedCharacter.Description}} 
+  	 	  	  
+  		</div>    		
+  		
+  		</div>
+  		   
+  </div>
+  
+    
+  </div>
+  
+  
+  </div>
+  
+
+  <hr>
+  
+ <modal title="Chatti" visible="showModal">
+    <div class="modal-body">
+      <div class="media"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading">{{mAsk}} </div></div></div>
+      
+       <div ng-if="!showAnswer" > 
+      <div class="media showAnswer"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading">Odotta... {{clock}} </div></div></div>
+      </div>
+      <div ng-if="showAnswer" > 
+      <div class="media showAnswer"> <i class="fa fa-weixin media-object pull-left "></i> <div class="media-body"><div class="media-heading">{{selectedCharacter.Name}}: {{mAnswer}} </div></div></div>
+            
+       <input type="text" name="widget2"  ng-show="empty" class="form-control marginetop20 sample-show-hide" ng-model="widget2" placeholder="{{placeholderstr}}"> 
+      
+      <button ng-click="chatContinue()" class="btn btn-warning btn-lg  marginetop10 pull-right" type="button">Jatkaa!</button>
+      </div>
+        
+      </div>    
+    
+  </modal>
+
+</div>

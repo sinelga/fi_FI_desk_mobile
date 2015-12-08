@@ -4,6 +4,10 @@
  cp -a ../version_20/. .
  mkdir version_22
  cp -a ../version_21/. .
+
+ mkdir version_23
+ cd version_23
+ cp -a ../version_22/. .
  
 
 
@@ -25,3 +29,6 @@ git subtree push --prefix version_20  origin version_20
 
 git add version_22 && git commit -m "Initial dist subtree commit"
 git subtree push --prefix version_22  origin version_22
+
+git add version_23 && git commit -m "Initial dist subtree commit"
+git subtree push --prefix version_23  origin version_23

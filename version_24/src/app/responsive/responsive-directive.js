@@ -13,12 +13,12 @@
          	        		        		     
         		var helper   = {
         				
-                      isXs: function () { return (winWidth < 768) && !(/Googlebot|Google Webmaster Tools/).test(str); },
-                      isSm: function () { return (winWidth >= 768 && winWidth < 992) && !(/Googlebot|Google Webmaster Tools/).test(str); },
-                      isMd: function () { return (winWidth >= 992 && winWidth < 1200) && !(/Googlebot|Google Webmaster Tools/).test(str); },
+                      isXs: function () { return (winWidth < 768) && !(/Googlebot|Google Webmaster Tools|Google Search Console/).test(str); },
+                      isSm: function () { return (winWidth >= 768 && winWidth < 992) && !(/Googlebot|Google Webmaster Tools|Google Search Console/).test(str); },
+                      isMd: function () { return (winWidth >= 992 && winWidth < 1200) && !(/Googlebot|Google Webmaster Tools|Google Search Console/).test(str); },
                       isLg: function () {
 
-                    	  return winWidth >= 1200 || (/Googlebot|Google Webmaster Tools/).test(str);
+                    	  return winWidth >= 1200 || (/Googlebot|Google Webmaster Tools|Google Search Console/).test(str);
                     	                      	                        
                       },
                       
